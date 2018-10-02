@@ -25,9 +25,9 @@ bin_dir: /usr/local/bin
 #etcd_peer_client_auth: true
 
 ## External LB example config
-apiserver_loadbalancer_domain_name: "k8slb.public.infra.hybris.com"
+apiserver_loadbalancer_domain_name: <TODO:loadbalance_domain_name>
 loadbalancer_apiserver:
-  address: 10.27.252.178
+  address: <TODO:loadbalance_ip>
   port: 6443
 
 ## Internal loadbalancers for apiservers
