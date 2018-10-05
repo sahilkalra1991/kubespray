@@ -207,5 +207,9 @@ spec:
   ports:
     - port: 443
       targetPort: 8443
+{% if dashboard_svc_type == "NodePort" %}
+      nodePort: {{ dashboard_node_port }}
+{% endif %}
+  type: {{ dashboard_svc_type }}
   selector:
     k8s-app: kubernetes-dashboard
